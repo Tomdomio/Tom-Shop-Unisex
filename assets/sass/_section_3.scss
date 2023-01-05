@@ -1,0 +1,38 @@
+.section_3-content {
+  &-heading {
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 120%;
+    color: $primary-text;
+  }
+}
+.category {
+  &-link {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition-duration: 0.3s;
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+    &:hover .category-img {
+      scale: 1.05;
+    }
+    &:hover .category-heading {
+      color: $primary-color;
+      background-color: transparent;
+    }
+  }
+  &-img {
+    transition-duration: 0.3s;
+  }
+  &-heading {
+    padding: 25px 30px;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 140%;
+    color: $primary-text;
+    background-color: $secondary-color;
+    transition-duration: 0.3s;
+  }
+}

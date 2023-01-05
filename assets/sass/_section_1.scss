@@ -1,0 +1,40 @@
+.content {
+  color: $primary-text;
+  text-transform: capitalize;
+  &-heading {
+    font-size: 3.8rem;
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 120%;
+  }
+  &-desc {
+    font-size: 2.2rem;
+    line-height: 160%;
+  }
+}
+
+.product {
+  &_item {
+    &-link {
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+  }
+  &_photos {
+    &-link {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+  &--btn {
+    padding: 31.5px 16px;
+    background-color: $primary-color;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 160%;
+    color: $primary-text;
+    font-family: $secondary-font;
+  }
+}

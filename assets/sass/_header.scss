@@ -1,0 +1,139 @@
+.bgc {
+  background-color: $bgc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_logo {
+    max-width: 180px;
+  }
+  &_list {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    &-item {
+      gap: 12px;
+      position: relative;
+      font-weight: bold;
+      line-height: 140%;
+      font-size: 1.6rem;
+      &::before {
+        content: "";
+        position: absolute;
+        border-top: 1px solid $primary-color;
+        width: 40%;
+        opacity: 0;
+        transform: translateX(-10%);
+        transition-duration: 0.3s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid $primary-color;
+        width: 40%;
+        right: -10%;
+        opacity: 0;
+        transition-duration: 0.3s;
+      }
+      &:hover.header_list-item::before {
+        transform: translateX(150%);
+        opacity: 1;
+      }
+      &:hover.header_list-item::after {
+        transform: translateX(-150%);
+        opacity: 1;
+      }
+    }
+    &-link {
+      padding: 20px;
+      color: $primary-text;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &_btn {
+    padding: 18.8px 30px;
+    gap: 0 10px;
+    min-width: 152px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 140%;
+    & ion-icon {
+      font-size: 2rem;
+    }
+  }
+}
+
+// header-section
+.section {
+  &_heading {
+    font-weight: 600;
+    font-size: 6.7rem;
+    line-height: 110%;
+    color: $primary-text;
+    padding-right: 10px;
+  }
+  &_desc {
+    font-size: 2.2rem;
+    line-height: 160%;
+    text-transform: capitalize;
+    color: $primary-text;
+    text-align: left;
+  }
+  &_btn {
+    padding: 20px 50px;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 140%;
+    & ion-icon {
+      font-size: 2rem;
+    }
+  }
+  &_total {
+    color: $primary-text;
+    &-heading {
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 140%;
+    }
+    &-desc {
+      font-size: 2.399rem;
+      line-height: 160%;
+    }
+  }
+}
+
+.placeholder {
+  color: $primary-text;
+  background-color: $secondary-color;
+  border-radius: 20px;
+  overflow: hidden;
+  &_heading {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    text-transform: capitalize;
+  }
+  &_desc {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    &-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+    }
+    & span {
+      font-size: 1.6rem;
+      line-height: 140%;
+    }
+  }
+}

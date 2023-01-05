@@ -1,0 +1,80 @@
+.section_4 {
+  background: url("../images/sale.png") top center / cover no-repeat;
+  padding-top: 35%;
+}
+
+.sale {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0 60px;
+  align-items: center;
+  position: relative;
+  transform: translateY(-15%);
+  right: -45%;
+  &-view-btn {
+    padding: 18.8px 50px;
+    background-color: #fff;
+    color: #2b2b2b;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 140%;
+    border: 1px solid transparent;
+    &:hover {
+      color: $primary-color;
+      background-color: transparent;
+      border: 1px solid $primary-color;
+    }
+  }
+  &-times {
+    padding: 20px;
+    background-color: #3b3b3b80;
+    color: $primary-text;
+    border-radius: 20px;
+    font-family: $secondary-font;
+    &-heading {
+      font-size: 1.2rem;
+      line-height: 110%;
+    }
+  }
+  &_count {
+    &-time {
+      font-weight: 700;
+      font-size: 3.8rem;
+      line-height: 120%;
+      margin-bottom: 5px;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 30%;
+        transform: translateY(-30%);
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #fff;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 42%;
+        transform: translateY(-42%);
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #fff;
+      }
+    }
+    &-text {
+      font-size: 1.2rem;
+      line-height: 110%;
+    }
+    &:last-child .sale_count-time::after,
+    &:last-child .sale_count-time::before {
+      display: none;
+    }
+  }
+  &_count {
+    position: relative;
+  }
+}
